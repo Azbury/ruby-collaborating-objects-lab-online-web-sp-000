@@ -40,5 +40,5 @@ class Artist
       puts song
     end
   end
-  
+
 end
