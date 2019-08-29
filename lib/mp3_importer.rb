@@ -6,6 +6,6 @@ class MP3Importer
   end
 
   def files
-    Dir.entries(self.path)
+    Dir.entries(self.path).delete_if {|f| f.size < 3}
   end
 end
