@@ -6,6 +6,6 @@ class MP3Importer
   end
 
   def files
-
+    Doc[self.path]
   end
 end
