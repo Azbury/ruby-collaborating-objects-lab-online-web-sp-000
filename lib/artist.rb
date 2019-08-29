@@ -20,6 +20,18 @@ class Artist
   end
 
   def self.find_or_create_by_name (artist_name)
-
+    found = false
+    found_artist_obj = nil
+    self.all.each do |artist|
+      if artist.name = artist_name
+        found = true
+        found_artist_obj = artist
+      end
+    end
+    if found == true
+      found_artist_obj
+    else
+      Artist.new(artist_name)
+    end
   end
 end
