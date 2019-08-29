@@ -17,4 +17,8 @@ class Song
     new_song.artist = Artist.new(file_array[0])
     new_song
   end
+
+  def artist_name (artist_name)
+    Artist.find_or_create_by_name(artist_name)
+  end
 end
