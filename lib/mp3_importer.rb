@@ -8,4 +8,8 @@ class MP3Importer
   def files
     Dir.entries(self.path).delete_if {|f| f.size < 3}
   end
+
+  def import
+    Song.new_by_filename(files)
+  end
 end
